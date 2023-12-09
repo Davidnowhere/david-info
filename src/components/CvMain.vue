@@ -21,7 +21,7 @@ export default {
       <div class="rightInfor text-right">
         <h6>HoChiMinh,Vietnam</h6>
         <h6>buiducmanh.work@gmail.com</h6>
-        <h6>0368896093</h6>
+        <h6></h6>
       </div>
     </div>
     <div class="cvProfile sm:flex-wrap lg:flex py-2">
