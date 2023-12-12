@@ -1,16 +1,30 @@
 <script>
 import {defineComponent} from 'vue'
-import {useToggle} from "@vueuse/core/index";
+import { useDark,useToggle } from "@vueuse/core";
 
 
 export default defineComponent({
   name: "darkLightToggle",
+  data() {
+    return{
+      isDark: '',
+    }
+  },
+  beforeMount() {
+    this.isDark = useDark()
+  },
+  mounted() {
+    this.isDark = useDark()
+    const isChecked = document.querySelector("input")
+    this.isDark ? isChecked.checked = false: isChecked.checked = true
+
+  },
   methods: {
     toggleDark() {
-      useToggle()
+      useToggle(this.isDark)
       const element = document.querySelector("html")
-      element.classList.toggle("dark")
-      console.log(this.isDark)
+        element.classList.toggle("dark")
+        this.isDark = !this.isDark
     },
 
   }
@@ -43,7 +57,7 @@ export default defineComponent({
 
 /* The slider */
 .slider {
-  --background: RGB(102, 102, 102 );
+  --background: rgb(77, 77, 77);
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -69,11 +83,11 @@ export default defineComponent({
 }
 
 input:checked + .slider {
-  background-color: rgb(115, 115, 115);
+  background-color: rgb(217, 217, 217);
 }
 
 input:checked + .slider:before {
   transform: translateX(100%);
-  box-shadow: inset 15px -4px 0px 15px #0d0d0d;
+  box-shadow: inset 15px -4px 0px 15px #ffff99;
 }
 </style>

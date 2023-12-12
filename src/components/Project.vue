@@ -8,31 +8,15 @@ export default {
   components: {
     Icon,
   },
+  props: {
+    project:{
+      type: Object,
+      default: null
+    } ,
+  },
   data() {
     return {
-      project:
-          {
-            name: 'HM',
-            role:'FULL-STACK',
-            timeStart:'2021',
-            timeEnd:'2021',
-            organization:'QASoft',
-            description:
-                {
-              aboutThis: '+ This is a purchasing management system, including:',
-              details: [
-                  '- Order Management',
-                  '- Products',
-                  '- Show, develop features: Customers, Stocks, Debt, Dashboard...'
-              ],
-              mainJob: '- Develop features on demand'
-                },
-            teamSize:'5 members, 1 tech lead',
-            responsibilities: [
-                '+ Analyze & design the base source with the team',
-                '+ Develop features as required.'
-            ],
-            technologies:'Laravel, VueJS, HTML, CSS, Javascript, Git.' },
+
     };
     },
   mounted() {
@@ -44,20 +28,17 @@ export default {
 
 <template>
   <div>
-    <div class="project divide-black dark:divide-slate-50 divide-y-2">
-      <div class="titleProject font-bold text-xl">
-        PROJECT
-      </div>
+    <div class="project">
       <div class="bodyProject flex gap-3 divide-black dark:divide-slate-50 divide-x-2 p-2 ">
         <div class="timeline flex-row justify-center text-center">
-          <div class="font-bold">2021</div>
+          <div class="font-bold">{{ project.timeStart }}</div>
           <div class="flex justify-center">
             <Icon class="text-2xl flex justify-center" icon="mdi:arrow-down-thin" />
           </div>
-          <div class="font-bold">Present</div>
+          <div class="font-bold">{{ project.timeEnd }}</div>
         </div>
         <div class="detailExperience p-2 pt-0">
-          <div class="projectName font-bold">
+          <div class="projectName font-bold uppercase">
             {{ project.name }}
           </div>
           <div class="role uppercase text-red-500 dark:text-cyan-400">

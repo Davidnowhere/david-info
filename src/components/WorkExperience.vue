@@ -11,7 +11,7 @@ export default defineComponent({
   data() {
     return {
       workExperience: {
-        title: 'WorkExperience',
+        title: 'Work Experience',
         timeStart: '2021',
         timeEnd:'Oct 2022',
         companyName: 'QASoft',

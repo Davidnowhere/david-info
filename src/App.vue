@@ -22,6 +22,6 @@ export default {
   margin-top: 60px;
 }
 body {
-  @apply transition-colors bg-slate-50 dark:bg-slate-900 text-black dark:text-white duration-200 ease-in-out;
+  @apply font-Popin transition-colors bg-slate-50 dark:bg-slate-900 text-black dark:text-white duration-200 ease-in-out;
 }
 </style>
