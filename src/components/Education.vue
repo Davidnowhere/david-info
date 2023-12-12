@@ -24,27 +24,27 @@ export default {
 
 <template>
   <div class="education">
-    <div class="education divide-black divide-y-2">
+    <div class="education divide-black dark:divide-slate-50 divide-y-2">
       <div class="titleEducation font-bold text-xl uppercase">
         {{ education.title }}
       </div>
-      <div class="bodyEducation flex gap-3 divide-black divide-x-2 p-2">
+      <div class="bodyEducation flex gap-3 divide-black dark:divide-slate-50 divide-x-2 p-2">
         <div class="timeline flex-row justify-center text-center">
           <div class="font-bold">{{ education.timeStart }}</div>
           <div class="flex justify-center">
             <Icon class="text-2xl flex justify-center" icon="mdi:arrow-down-thin" />
           </div>
-          <div class="font-bold">Dec 2021</div>
+          <div class="font-bold">{{education.timeEnd}}</div>
         </div>
         <div class="detailEducation p-2 pt-0">
           <div class="college font-bold uppercase">
-            fpt polytechnic
+            {{education.collegeName}}
           </div>
-          <div class="major text-red-500">
-            Major: Software application, Web developer
+          <div class="major text-red-500 dark:text-cyan-400">
+            {{education.major}}
           </div>
-          <div class="status">
-            GRADUATED
+          <div class="status uppercase">
+            {{education.status}}
           </div>
         </div>
       </div>

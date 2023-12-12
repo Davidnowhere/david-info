@@ -21,4 +21,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+body {
+  @apply transition-colors bg-slate-50 dark:bg-slate-900 text-black dark:text-white duration-200 ease-in-out;
+}
 </style>

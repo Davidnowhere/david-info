@@ -29,7 +29,7 @@ export default {
 </script>
 
 <template>
-  <div class="summary divide-black divide-y-2 lg:pl-3">
+  <div class="summary divide-black dark:divide-slate-50 divide-y-2 lg:pl-3">
     <div class="titleSummary font-bold text-xl uppercase">
       {{summary.title}}
     </div>

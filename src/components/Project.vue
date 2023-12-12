@@ -44,11 +44,11 @@ export default {
 
 <template>
   <div>
-    <div class="project divide-black divide-y-2">
+    <div class="project divide-black dark:divide-slate-50 divide-y-2">
       <div class="titleProject font-bold text-xl">
         PROJECT
       </div>
-      <div class="bodyProject flex gap-3 divide-black divide-x-2 p-2 ">
+      <div class="bodyProject flex gap-3 divide-black dark:divide-slate-50 divide-x-2 p-2 ">
         <div class="timeline flex-row justify-center text-center">
           <div class="font-bold">2021</div>
           <div class="flex justify-center">
@@ -60,7 +60,7 @@ export default {
           <div class="projectName font-bold">
             {{ project.name }}
           </div>
-          <div class="role uppercase text-red-500">
+          <div class="role uppercase text-red-500 dark:text-cyan-400">
             {{ project.role }}
           </div>
           <div class="Organization">
