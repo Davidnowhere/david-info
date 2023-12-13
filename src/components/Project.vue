@@ -30,7 +30,7 @@ export default {
   <div>
     <div class="project">
       <div class="bodyProject flex gap-3 divide-black dark:divide-slate-50 divide-x-2 p-2 ">
-        <div class="timeline flex-row justify-center text-center">
+        <div class="timeline !min-w-[80px] flex-row justify-center text-center">
           <div class="font-bold">{{ project.timeStart }}</div>
           <div class="flex justify-center">
             <Icon class="text-2xl flex justify-center" icon="mdi:arrow-down-thin" />
