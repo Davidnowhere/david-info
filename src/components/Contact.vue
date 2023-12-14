@@ -8,7 +8,8 @@ export default defineComponent({
     return {
       contact:{
         location:'HoChiMinh City',
-        email:'buiducmanh.work@gmail.com',
+        email:'manhbd334@gmail.com',
+        phone:0368896093
       }
     }
   },
@@ -21,6 +22,7 @@ export default defineComponent({
 <div class="contact">
   <h6 class="">{{ contact.location }}</h6>
   <h6>{{contact.email}}</h6>
+  <h6>{{contact.phone}}</h6>
 </div>
 </template>
 
